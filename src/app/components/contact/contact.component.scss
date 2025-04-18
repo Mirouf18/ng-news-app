@@ -1,0 +1,87 @@
+@use '../../../styles.scss' as *;
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:4rem;
+  margin: 2rem auto;
+}
+
+.contact-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.contact-form {
+  position: relative;
+  top: -200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem;
+  width: 60vw;
+  background-color: $color-secondary;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto auto auto;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.input-container {
+  grid-column: auto / span 2;
+}
+
+.message-container {
+  grid-column: auto/ span 4;
+}
+
+.send-button {
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 1;
+  margin: auto;
+}
+
+.image-map {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
