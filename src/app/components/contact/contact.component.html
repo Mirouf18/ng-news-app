@@ -1,0 +1,60 @@
+<div class="contact-container">
+  <header class="contact-header">
+    <h5>Get in touch</h5>
+    <p>If you have any questions or feedback, feel free to reach out!</p>
+  </header>
+
+  <section class="contact-info-list">
+    <app-contact-card
+      iconSrc="/images/email.svg"
+      altText="Email"
+      title="Email"
+      description="hello@company.com"
+    >
+    </app-contact-card>
+    <app-contact-card
+      iconSrc="/images/phone.svg"
+      altText="Phone"
+      title="Phone"
+      description="(123) 456-7890"
+    >
+    </app-contact-card>
+    <app-contact-card
+      iconSrc="/images/office.svg"
+      altText="Office"
+      title="Office"
+      description="123 Main St, Anytown, USA."
+    >
+    </app-contact-card>
+  </section>
+  <img src="/images/map.jpg" alt="Location map" class="image-map" />
+  <section class="contact-form">
+    <form>
+      <div class="input-container">
+        <label for="name">Name:</label>
+        <input id="name" type="text" placeholder="Your Name" />
+      </div>
+      <div class="input-container">
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="Your Email" />
+      </div>
+      <div class="input-container">
+        <label for="phone">Phone:</label>
+        <input id="phone" type="tel" placeholder="Your Phone" />
+      </div>
+      <div class="input-container">
+        <label for="subject">Subject:</label>
+        <input id="subject" type="text" placeholder="Subject" />
+      </div>
+      <div class="message-container">
+        <label for="message">Message:</label>
+        <textarea id="message" placeholder="Your Message"></textarea>
+      </div>
+      <app-button class="send-button"
+        label="Send Message"
+        (clicked)="onButtonClicked($event)"
+      ></app-button>
+    </form>
+  </section>
+
+</div>
