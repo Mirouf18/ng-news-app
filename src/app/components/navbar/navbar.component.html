@@ -1,5 +1,11 @@
 <nav class="navbar">
-  <a routerLink="/">Home</a>
-  <a routerLink="/news">News</a>
-  <a routerLink="/contact">Contact</a>
+  <a
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Home
+  </a>
+  <a routerLink="/news" routerLinkActive="active">News</a>
+  <a routerLink="/contact" routerLinkActive="active">Contact</a>
 </nav>
