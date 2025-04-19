@@ -21,7 +21,7 @@ jobs:
         run: npm ci
 
       - name: Deploy to GitHub Pages
-        run: npx ng deploy build-target=production --base-href /ng-news-app
+        run: npx ng deploy build-target=production --base-href=/
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
