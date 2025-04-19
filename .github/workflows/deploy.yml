@@ -6,10 +6,6 @@ on:
       - main  # Change to your default branch if different
       - feature/*  # Optional: Deploy on feature branches as well
 
-permissions:
-  contents: write  # Required to publish to GitHub Pages
-  pages: write  # Required to publish to GitHub Pages
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -25,11 +21,10 @@ jobs:
         run: npm ci
 
       - name: Build production
-        run: npm run build -- --configuration production --base-href "/ng-news-app/"
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./ng-news-app/dist/ng-news-app     # now this path is correct
+        run: npm run build
+      - name: Deploy to gh pages
+        run: |
+          npx angular-cli-ghpages --dir=dist/ng-news-app
+        env:
+          CI: true
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
