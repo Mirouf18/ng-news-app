@@ -117,6 +117,7 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "repo": "https://github.com/Mirouf18/ng-news-app.git",
+            "buildTarget": "ng-news-app:build:production",
             "branch": "gh-pages",
             "message": "chore: deploy via ng deploy",
             "baseHref": "/ng-news-app/"
