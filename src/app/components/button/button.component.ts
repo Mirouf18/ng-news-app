@@ -10,6 +10,7 @@ export class ButtonComponent {
   @Input() label: string = 'Click me';
   @Input() disabled: boolean = false;
   @Input() type: 'button' | 'submit' = 'button';
+  @Input() className: string = 'primary';
 
   @Output() clicked = new EventEmitter<Event>();
 

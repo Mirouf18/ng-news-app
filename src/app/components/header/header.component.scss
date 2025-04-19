@@ -1,4 +1,4 @@
-@use '../../../styles.scss' as *;
+@use '../../../variables.scss' as vars;
 
 .app-header {
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: $color-secondary;
+  background-color: vars.$color-secondary;
 
   .logo {
     display: flex;
@@ -17,6 +17,31 @@
   .logo h1 {
     margin: 0;
     font-size: 1.5rem;
-    color: $color-primary-text;
+    color: vars.$color-primary-text;
   }
+}
+
+.app-footer {
+  background-color: vars.$color-background;
+  .newsletter {
+    background-color: vars.$color-primary;
+    color: vars.$color-primary-text;
+    .input-container {
+      input[type="email"] {
+        border: 1px solid vars.$color-primary-text;
+      }
+    }
+    .message {
+      color: vars.$color-tertiary-text;
+      .error-message { color: vars.$color-error; }
+    }
+  }
+}
+
+.footer-links a:hover {
+  color: vars.$color-primary;
+}
+
+.social-icon {
+  fill: vars.$color-primary;
 }

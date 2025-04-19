@@ -1,0 +1,27 @@
+<section class="newsletter">
+  <h2>Get our news delivered From us to your inbox weekly.</h2>
+  <form (ngSubmit)="subscribe()" class="form-container" #f="ngForm">
+    <div class="input-container">
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
+      <app-button label="Subscribe" (clicked)="subscribe()" className="secondary"></app-button>
+    </div>
+    <div class="message">
+      <p *ngIf="subscriptionMessage" class="subscription-message">
+        {{ subscriptionMessage }}
+      </p>
+      <p *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </p>
+      <p>
+        Get a response tomorrow if you submit by 9pm today. If we receive
+        after 9pm, you will get a response the following day.
+      </p>
+    </div>
+  </form>
+</section>

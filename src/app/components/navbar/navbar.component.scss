@@ -1,26 +1,26 @@
-@use '../../../styles.scss' as *;
+@use '../../../variables.scss' as vars;
 
 .navbar {
-  background-color: $color-secondary;
+  background-color: vars.$color-secondary;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
 
   a {
-    color: $color-primary-text;
+    color: vars.$color-primary-text;
     margin-right: 1rem;
     text-decoration: none;
     font-weight: bold;
 
     &:hover {
       text-decoration: none;
-      color: $color-primary;
+      color: vars.$color-primary;
       cursor: pointer;
     }
 
     &.active {
-      color: $color-primary;
+      color: vars.$color-primary;
       cursor: none;
     }
   }

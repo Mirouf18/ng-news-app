@@ -1,0 +1,65 @@
+@use '../../../variables.scss' as vars;
+
+@mixin card-shadow { box-shadow: 5px 5px 5px rgba(0,0,0,0.1); }
+
+.app-footer {
+  background-color: vars.$color-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100vw;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  margin-bottom: 0.5rem;
+
+  a {
+    margin: 0 0.5rem;
+    color: vars.$color-primary-text;
+    text-decoration: none;
+
+    &:hover {
+      color: vars.$color-primary;
+    }
+  }
+}
+
+.footer-copy {
+  font-size: 0.875rem;
+  color: vars.$color-tertiary-text;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  color: vars.$color-primary;
+
+  a {
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    transition: transform 0.3s ease;
+  }
+}
+
+.social-icon {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.3s ease;
+  fill: vars.$color-primary;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

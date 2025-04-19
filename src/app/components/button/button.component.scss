@@ -1,9 +1,7 @@
-@use '../../../styles.scss' as *;
+@use '../../../variables.scss' as var;
 
 button {
-  background-color: $color-primary;
-  color: $color-secondary;
-  border: none;
+  font-family: var.$body-font-family;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 4px;
@@ -11,10 +9,23 @@ button {
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: darken($color-primary, 10%);
+    background-color: darken(var.$color-primary, 10%);
   }
   &:disabled {
-    background-color: lighten($color-primary, 20%);
+    background-color: lighten(var.$color-primary, 20%);
     cursor: not-allowed;
   }
+
+}
+
+.primary {
+  border: none;
+  background-color: var.$color-primary;
+  color: var.$color-secondary;
+}
+
+.secondary {
+  background-color: var.$color-primary;
+  color: var.$color-secondary;
+  border: 1px solid var.$color-secondary;
 }
