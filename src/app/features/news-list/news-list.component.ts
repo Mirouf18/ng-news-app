@@ -20,18 +20,6 @@ export class NewsListComponent implements OnInit {
   constructor(private newsApi: NewsApiService, private spaceNewsService: SpaceNewsService) {}
 
   ngOnInit(): void {
-    // Fetch news articles from the News API
-    /*this.newsApi.getEverything('technology').subscribe({
-      next: res => {
-        this.articles = res.articles;
-        this.loading = false;
-      },
-      error: err => {
-        this.error = 'Failed to load news.';
-        console.error(err);
-        this.loading = false;
-      }
-    });*/
     // Fetch news articles from the Space News API
     this.spaceNewsService.getArticles().subscribe({
       next: res => {
