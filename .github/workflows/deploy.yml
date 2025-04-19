@@ -2,7 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main  # Change to your default branch if different
+      - feature/*  # Optional: Deploy on feature branches as well
 
 permissions:
   contents: write  # Required to publish to GitHub Pages
