@@ -4,7 +4,7 @@
     [attr.target]="target"
     rel="noopener"
     [class]="className"
-    (click)="$event.stopPropagation()"
+    (click)="onClick($event)"
   >
     {{ label }}
   </a>

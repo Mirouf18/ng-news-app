@@ -18,8 +18,11 @@ export class ButtonComponent {
   @Output() clicked = new EventEmitter<Event>();
 
   onClick(e: Event) {
-    if (!this.href) {
+    if (this.href) {
       e.preventDefault();
+      e.stopPropagation();
+      this.clicked.emit(e);
+    } else {
       this.clicked.emit(e);
     }
   }
