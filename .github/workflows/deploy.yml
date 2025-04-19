@@ -1,10 +1,8 @@
-name: Deploy Angular App to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # or your default branch
-      - feature/*  # or any other branches you want to deploy from
+    branches: [main]
 
 permissions:
   contents: write  # Required to publish to GitHub Pages
@@ -14,27 +12,27 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    defaults:
+      run:
+        working-directory: ./ng-news-app     # ‣ change to your inner project folder
 
-      - name: Setup Node.js
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install deps
         run: npm ci
 
-      - name: Build production bundle
-        run: npm run build -- --configuration production --base-href "/${{ github.repository }}/"
+      - name: Build production
+        run: npm run build -- --configuration production --base-href "/ng-news-app/"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/ng-news-app
           publish_branch: gh-pages
-          # optionally set user_name / user_email for commits
-          # user_name: github-actions[bot]
-          # user_email: github-actions[bot]@users.noreply.github.com
+          publish_dir: ./dist/ng-news-app     # now this path is correct
