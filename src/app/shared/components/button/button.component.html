@@ -1,21 +1,22 @@
-<button
-  [attr.type]="type"
-  [disabled]="disabled"
-  [class]="className"
-  (click)="onClick($event)"
->
-  <ng-container *ngIf="href; else textTpl">
-    <a
-      [href]="href"
-      [attr.target]="target"
-      rel="noopener"
-      (click)="$event.stopPropagation()"
-    >
-      {{ label }}
-    </a>
-  </ng-container>
-
-  <ng-template #textTpl>
+<ng-container *ngIf="href; else buttonTpl">
+  <a
+    [href]="href"
+    [attr.target]="target"
+    rel="noopener"
+    [class]="className"
+    (click)="$event.stopPropagation()"
+  >
     {{ label }}
-  </ng-template>
-</button>
+  </a>
+</ng-container>
+
+<ng-template #buttonTpl>
+  <button
+    [attr.type]="type"
+    [disabled]="disabled"
+    [class]="className"
+    (click)="onClick($event)"
+  >
+    {{ label }}
+  </button>
+</ng-template>
