@@ -1,4 +1,4 @@
-@use '../../../styles.scss' as *;
+@use '../../../variables.scss' as var;
 
 .contact-card {
   display: flex;
@@ -6,24 +6,24 @@
   justify-content: space-evenly;
   align-items: center;
   padding: 1rem;
-  background-color: $color-secondary;
+  background-color: var.$color-secondary;
   border-radius: 0.5rem;
   flex: 1 1 0;
   min-width: 30vw;
-  
+
 
   .contact-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: $color-primary;
+    background-color: var.$color-primary;
     padding: 0.8rem;
   }
 
   h6 {
     margin: 0.5rem 0;
     font-size: 1rem;
-    color: $color-primary
+    color: var.$color-primary
   }
 
   p {

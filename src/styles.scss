@@ -1,17 +1,4 @@
-$color-primary: #7C4EE4;
-$color-secondary: #FFFFFF;
-$color-primary-text: #333333;
-$color-secondary-text: #666666;
-$color-tertiary-text: #999999;
-$color-background: #E2E2E2;
-$font-stack: 'Helvetica Neue', sans-serif;
-
-$heading-font-family: "Raleway", sans-serif;
-$body-font-family: "Roboto", sans-serif;
-
-$font-size-base: 16px;
-$font-weight-regular: 400;
-$font-weight-bold: 700;
+@use './variables.scss' as vars;
 
 * {
   box-sizing: border-box;
@@ -21,20 +8,20 @@ $font-weight-bold: 700;
 
 html, body {
   height: 100%;
-  font-family: $font-stack;
-  color: $color-primary-text;
+  font-family: vars.$body-font-family;
+  color: vars.$color-primary-text;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $heading-font-family;
-  color: $color-primary-text;
+  font-family: vars.$heading-font-family;
+  color: vars.$color-primary-text;
 }
 
 body {
-  font-family: $body-font-family;
-  font-size: $font-size-base;
-  color: $color-secondary-text;
-  background-color: $color-background;
+  font-family: vars.$body-font-family;
+  font-size: vars.$font-size-base;
+  color: vars.$color-secondary-text;
+  background-color: vars.$color-background;
   margin: 0;
   padding: 0;
 }
@@ -62,11 +49,11 @@ h6 {
 p .big {
   font-size: 1.125rem;
   line-height: 1.625rem;
-  font-weight: $font-weight-regular;
+  font-weight: vars.$font-weight-regular;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.625rem;
-  font-weight: $font-weight-regular;
+  font-weight: vars.$font-weight-regular;
 }

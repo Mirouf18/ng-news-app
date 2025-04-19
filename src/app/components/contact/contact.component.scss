@@ -1,20 +1,22 @@
-@use '../../../styles.scss' as *;
+@use '../../../variables.scss' as vars;
 
 .contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap:4rem;
+  gap: 4rem;
   margin: 2rem auto;
+  background-color: vars.$color-secondary;
 }
 
-.contact-header{
+.contact-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  color: vars.$color-primary-text;
 }
 
 .contact-info-list {
@@ -36,7 +38,7 @@
   gap: 1rem;
   padding: 3rem;
   width: 60vw;
-  background-color: $color-secondary;
+  background-color: vars.$color-secondary;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 2rem auto;
@@ -60,8 +62,7 @@
   width: 100%;
   padding: 0.5rem;
   box-sizing: border-box;
-
-  border: 1px solid #ccc;
+  border: 1px solid vars.$color-primary-text;
   border-radius: 4px;
   margin-bottom: 1rem;
 }
