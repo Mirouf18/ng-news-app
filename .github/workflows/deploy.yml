@@ -13,11 +13,6 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: ./ng-news-app     # ‣ change to your inner project folder
-
     steps:
       - uses: actions/checkout@v3
 
@@ -37,4 +32,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./dist/ng-news-app     # now this path is correct
+          publish_dir: ./ng-news-app/dist/ng-news-app     # now this path is correct
