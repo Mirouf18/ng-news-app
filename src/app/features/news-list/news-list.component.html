@@ -1,0 +1,17 @@
+<section class="news-list">
+  <p *ngIf="loading">Loading news…</p>
+  <p *ngIf="error" class="error">{{ error }}</p>
+  <div *ngIf="!loading && !error" class="articles">
+    <app-news-article-card
+      [featured]="true"
+      *ngIf="articles.length > 0"
+      [article]="articles[0]">
+    </app-news-article-card>
+    <app-news-article-card
+      *ngFor="let article of articles | slice : 1"
+      [article]="article">
+    </app-news-article-card>
+  </div>
+</section>
+
+

@@ -1,0 +1,26 @@
+<article class="news-article-card" [class.featured-article]="featured">
+  <img
+    *ngIf="article.urlToImage"
+    [src]="article.urlToImage"
+    [alt]="article.title"
+    class="thumbnail"
+    [class.featured-img]="featured"
+  />
+  <section class="news-article-card-content">
+    <h5 class="title">{{ article.title }}</h5>
+    <p class="meta">
+      <span>{{ article.source.name }}</span> |
+      <time>{{ article.publishedAt | date:'medium' }}</time>
+    </p>
+    <p class="description">{{ article.description }}</p>
+
+    <app-button
+      [label]="'View'"
+      [routerLink]="['/news-detail', article.source.id]"
+      class="read-more"
+    >
+      Read full article →
+    </app-button>
+  </section>
+
+</article>

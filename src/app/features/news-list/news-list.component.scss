@@ -1,0 +1,26 @@
+@use '../../../styles/variables' as vars;
+
+.news-list {
+  padding: 2rem;
+  background: vars.$color-secondary;
+
+  .error {
+    color: vars.$color-error;
+    text-align: center;
+  }
+
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-auto-flow: dense;
+    gap: 1rem;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .featured-article {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+  }
+}
+

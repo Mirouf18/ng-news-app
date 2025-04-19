@@ -1,0 +1,35 @@
+<ng-container *ngIf="article; else notFound">
+  <div class="news-detail-container">
+    <header class="article-header">
+      <h2>{{ article.title }}</h2>
+      <p class="meta">
+        By {{ article.author }} — {{ article.publishedAt | date:'longDate' }}
+      </p>
+    </header>
+    <main class="article-main">
+      <div class="article-image" *ngIf="article.urlToImage">
+        <img [src]="article.urlToImage" alt="{{ article.title }}" />
+      </div>
+      <p class="content">{{ article.content || 'No content available.' }}</p>
+    </main>
+    <footer class="article-footer">
+      <p>Source: {{ article.source.name }}</p>
+      <p>
+        Read more at
+        <a [href]="article.url" target="_blank" rel="noopener">{{ article.url }}</a>
+      </p>
+      <app-button
+        [routerLink]="['/news']"
+        [label]="'Back to News List'"
+        [className]="'primary'">
+      </app-button>
+    </footer>
+  </div>
+</ng-container>
+
+<ng-template #notFound>
+  <div class="not-found">
+    <p>Sorry, this article could not be loaded.</p>
+    <a routerLink="/news">← Back to News List</a>
+  </div>
+</ng-template>
