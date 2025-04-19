@@ -1,0 +1,14 @@
+@use '../../../styles/variables.scss' as vars;
+
+.news-detail-container {
+  padding: 2rem;
+  background: vars.$color-secondary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  height: auto;
+
+
+}

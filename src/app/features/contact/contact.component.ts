@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../button/button.component'; // Adjust path if needed
-import { ContactCardComponent } from '../contact-card/contact-card.component';
+import { ButtonComponent } from '../../shared/components/button/button.component'; // Adjust path if needed
+import { ContactCardComponent } from '../../shared/components/contact-card/contact-card.component';
 
 @Component({
   standalone: true,

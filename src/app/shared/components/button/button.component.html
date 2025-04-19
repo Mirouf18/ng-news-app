@@ -1,0 +1,21 @@
+<button
+  [attr.type]="type"
+  [disabled]="disabled"
+  [class]="className"
+  (click)="onClick($event)"
+>
+  <ng-container *ngIf="href; else textTpl">
+    <a
+      [href]="href"
+      [attr.target]="target"
+      rel="noopener"
+      (click)="$event.stopPropagation()"
+    >
+      {{ label }}
+    </a>
+  </ng-container>
+
+  <ng-template #textTpl>
+    {{ label }}
+  </ng-template>
+</button>

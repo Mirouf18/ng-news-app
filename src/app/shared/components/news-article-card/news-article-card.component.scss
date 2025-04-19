@@ -1,0 +1,56 @@
+@use '../../../../styles/variables.scss' as vars;
+
+.news-article-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+  img.thumbnail {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  // when the host has .featured-article, plus the img.featured-img class
+  &.featured-article {// change to row for featured article
+    flex-direction: row;  // change to row for featured article
+    img.thumbnail.featured-img {
+      width: 50%;   // full width for featured card
+      height: auto;  // auto height for featured card
+      object-fit: cover;
+    }
+
+  }
+
+  .news-article-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 400px;
+    margin-block-start: auto;
+    margin-block-end: auto;
+  }
+}
+
+
+.title {
+  color: vars.$color-primary-text;
+}
+.meta {
+  color: vars.$color-tertiary-text;
+}
+.description {
+  text-overflow: ellipsis;
+  color: vars.$color-primary-text;
+}
+.read-more {
+  margin-top: auto;
+  margin-left: auto;
+  color: vars.$color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
