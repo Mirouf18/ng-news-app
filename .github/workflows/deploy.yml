@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # or your default branch
+      - feature/*  # or any other branches you want to deploy from
 
 jobs:
   build-and-deploy:
