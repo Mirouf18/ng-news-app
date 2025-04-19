@@ -3,7 +3,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { Article } from '../models/news-api.model';
 import { SpaceArticle, SpaceArticleResponse } from '../models/space-news.model';
-import * as qs from 'querystring';
 
 @Injectable({ providedIn: 'root' })
 export class SpaceNewsService {
