@@ -6,6 +6,10 @@ on:
       - main  # or your default branch
       - feature/*  # or any other branches you want to deploy from
 
+permissions:
+  contents: write  # Required to publish to GitHub Pages
+  pages: write  # Required to publish to GitHub Pages
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
