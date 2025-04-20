@@ -27,8 +27,6 @@
     flex-direction: column;
     gap: 1rem;
     height: 400px;
-    margin-block-start: auto;
-    margin-block-end: auto;
   }
 }
 
@@ -42,9 +40,10 @@
 .description {
   text-overflow: ellipsis;
   color: vars.$color-primary-text;
+  overflow: hidden;
+  margin-bottom: auto;
 }
 .read-more {
-  margin-top: auto;
   margin-left: auto;
   color: vars.$color-primary;
   text-decoration: none;
