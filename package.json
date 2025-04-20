@@ -1,13 +1,14 @@
 {
   "name": "ng-news-app",
   "version": "0.0.0",
+  "homepage": "https://mirouf18.github.io/ng-news-app",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy-ghpages": "ng deploy --base-href /"
+    "deploy-ghpages": "ng deploy --base-href=/ng-news-app/"
   },
   "private": true,
   "dependencies": {
