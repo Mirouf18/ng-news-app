@@ -11,7 +11,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
   background-image: url('../../../../assets/images/background-top-left.svg'), url('../../../../assets/images/background-bottom-right.svg');
   background-position: 0% -20%, right 0% bottom -50%;
   background-repeat: no-repeat , no-repeat;
@@ -20,7 +20,7 @@
 
 
  img.feature-article-image {
-  margin: 5rem;
+  margin: 3rem;
   object-fit: cover;
   border-radius: 1.5rem;
 }
@@ -32,8 +32,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 4rem;
-  margin : 5rem;
+  gap: 3rem;
+  margin : 3rem;
 
 }
 
