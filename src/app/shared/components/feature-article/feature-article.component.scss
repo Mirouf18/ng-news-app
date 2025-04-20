@@ -1,0 +1,45 @@
+@use '../../../../styles/variables.scss' as vars;
+
+.feature-article-wrapper {
+  width: 100vw;
+  height: 50vh;
+
+  background-color: vars.$color-primary;
+  color: vars.$color-secondary;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url('../../../../assets/images/background-top-left.svg'), url('../../../../assets/images/background-bottom-right.svg');
+  background-position: 0% -20%, right 0% bottom -50%;
+  background-repeat: no-repeat , no-repeat;
+
+}
+ .feature-article-image {
+  width: 40%;
+  height: 60%;
+ }
+ img.feature-article-image {
+  margin: 3rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+
+.feature-article-content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.feature-article-category {
+  font-size: 1.5rem;
+  color: vars.$color-secondary;
+}
+.feature-article-category, .feature-article-title, .feature-article-description {
+  color: vars.$color-secondary;
+}
