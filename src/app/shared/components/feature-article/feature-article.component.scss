@@ -20,22 +20,20 @@
 
 
  img.feature-article-image {
-  width: 60vw;
-  height: auto;
-  max-height: 35vw;
-  max-width: 35vw;
+  margin: 5rem;
   object-fit: cover;
   border-radius: 1.5rem;
 }
 
 
 .feature-article-content {
-  width: 40vw;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
+  margin : 5rem;
 
 }
 
