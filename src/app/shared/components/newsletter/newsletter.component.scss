@@ -11,6 +11,9 @@
   color: vars.$color-primary-text;
   width: 100vw;
   padding: 5rem 0;
+  background-image: url('/assets/images/background-top-left.svg'), url('/assets/images/background-bottom-right.svg');
+  background-position: 0% -50%, right 0% bottom -1000%;
+  background-repeat: no-repeat , no-repeat;
 
   h2 {
     margin: 0 auto;
