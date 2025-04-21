@@ -1,6 +1,8 @@
-@use '../../../../styles/variables.scss' as vars;
+@use "../../../../styles/variables.scss" as vars;
 
-@mixin card-shadow { box-shadow: 5px 5px 5px rgb(0 0 0 / 10%); }
+@mixin card-shadow {
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
+}
 
 .app-footer {
   background-color: vars.$color-background;
@@ -25,13 +27,19 @@
   color: vars.$color-primary-text;
 }
 
-a.footer-links {
-  margin: 0 0.5rem;
-  color: vars.$color-primary-text;
-  text-decoration: none;
+.footer-links {
+  margin: 0 0.5rem 0.5rem;
 
-  &:hover {
-    color: vars.$color-primary;
+  a {
+    color: vars.$color-primary-text;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: vars.$color-primary;
+    }
   }
 }
 
@@ -46,13 +54,11 @@ a.footer-links {
   gap: 1rem;
   color: vars.$color-primary;
 
-  a {
-    &:hover {
-      transform: scale(1.1);
-    }
-
-    transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
   }
+
+  transition: transform 0.3s ease;
 }
 
 .social-icon {

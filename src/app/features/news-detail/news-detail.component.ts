@@ -18,7 +18,6 @@ export class NewsDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private spaceNewsService: SpaceNewsService) {}
 
   ngOnInit(): void {
-    // Get the article ID from the route parameters
     const id = this.route.snapshot.paramMap.get('id');
     const articleId = id ? Number(id) : null;
 

@@ -114,7 +114,7 @@ describe('SpaceNewsService', () => {
       expect(article.title).toBe('Test Space Title');
       expect(article.source.id).toBe(101);
       expect(article.source.name).toBe('SpaceTest');
-      expect(article.author).toBeNull(); // Expect author to be null
+      expect(article.author).toBeNull();
       expect(article.urlToImage).toBe('https://space.test/img.jpg');
     });
 
@@ -124,22 +124,22 @@ describe('SpaceNewsService', () => {
   });
   it('should return null for author if no authors are present', () => {
     service.getArticleById(101).subscribe((article: Article) => {
-      expect(article.author).toBeNull(); // Expect author to be null
+      expect(article.author).toBeNull();
     });
 
     const req = httpMock.expectOne(`${URL}/101`);
     expect(req.request.method).toBe('GET');
-    req.flush({ ...sampleSpaceArticle, authors: [] }); // Mock response with empty authors
+    req.flush({ ...sampleSpaceArticle, authors: [] });
   });
 
   it('should return null for author if authors is an empty array', () => {
     service.getArticleById(101).subscribe((article: Article) => {
-      expect(article.author).toBeNull(); // Expect author to be null
+      expect(article.author).toBeNull();
     });
 
     const req = httpMock.expectOne(`${URL}/101`);
     expect(req.request.method).toBe('GET');
-    req.flush({ ...sampleSpaceArticle, authors: [] }); // Mock response with empty authors
+    req.flush({ ...sampleSpaceArticle, authors: [] });
   });
   it('should return null for author if authors is an empty string', () => {
 

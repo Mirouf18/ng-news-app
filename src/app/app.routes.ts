@@ -6,7 +6,7 @@ import { HomeComponent } from './features/home/home.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'news-detail/:id', component: NewsDetailComponent },
+  { path: 'news/:id', component: NewsDetailComponent },
   { path: 'news', component: NewsComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '' },

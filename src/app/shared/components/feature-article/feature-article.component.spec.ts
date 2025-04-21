@@ -6,8 +6,6 @@ import { SpaceNewsService } from '../../../core/services/space-news.service';
 import { Article } from '../../../core/models/news-api.model';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 
-// filepath: d:/Angular/ng-news-app/ng-news-app/src/app/shared/components/feature-article/feature-article.component.spec.ts
-
 
 class MockSpaceNewsService {
   getArticles = jasmine.createSpy('getArticles');
@@ -58,7 +56,7 @@ describe('FeatureArticleComponent', () => {
 
   it('should fetch articles and set the first one on init', () => {
     service.getArticles.and.returnValue(of(mockArticles));
-    fixture.detectChanges(); // triggers ngOnInit
+    fixture.detectChanges();
     expect(service.getArticles).toHaveBeenCalledWith(1, 0, true);
     expect(component.article).toBe(mockArticles[0]);
   });
@@ -68,7 +66,6 @@ describe('FeatureArticleComponent', () => {
     service.getArticles.and.returnValue(of([]));
     fixture.detectChanges();
     expect(console.error).toHaveBeenCalledWith('No articles found');
-    // article input should remain undefined or as provided
     expect(component.article).toBeUndefined();
   });
 });
