@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Article } from '../../../core/models/news-api.model';
 import { RouterLink } from '@angular/router';
@@ -13,7 +13,7 @@ import { SpaceNewsService } from '../../../core/services/space-news.service';
   templateUrl: './feature-article.component.html',
   styleUrls: ['./feature-article.component.scss']
 })
-export class FeatureArticleComponent {
+export class FeatureArticleComponent implements OnInit {
   @Input() article!: Article;
 
   constructor(private spaceNewsService: SpaceNewsService) { }

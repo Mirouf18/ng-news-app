@@ -10,7 +10,6 @@ import { ContactCardComponent } from '../../shared/components/contact-card/conta
   imports: [ButtonComponent, ContactCardComponent]
 })
 export class ContactComponent {
-  constructor() { }
 
   onButtonClicked(event: Event): void {
     console.log('Button clicked', event);
