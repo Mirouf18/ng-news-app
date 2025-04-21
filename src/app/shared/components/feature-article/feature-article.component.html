@@ -1,19 +1,21 @@
-<article class="feature-article-wrapper">
-  <section class="feature-article-content">
-    <h2 class="feature-article-category">Featured Article</h2>
-    <h3 class="feature-article-title">{{ article.title }}</h3>
-    <p class="feature-article-description">{{ article.description }}</p>
-    <app-button
-      [label]="'Read more'"
-      [routerLink]="['/news-detail', article.source.id]"
-      [className]="'secondary'"
-    >
-    </app-button>
-  </section>
-    <img
-      *ngIf="article.urlToImage"
-      [src]="article.urlToImage"
-      [alt]="article.title"
-      class="feature-article-image"
-    />
-</article>
+<ng-container *ngIf="article">
+  <article class="feature-article-wrapper">
+    <section class="feature-article-content">
+      <h2 class="feature-article-category">Featured Article</h2>
+      <h3 class="feature-article-title">{{ article.title }}</h3>
+      <p class="feature-article-description">{{ article.description }}</p>
+      <app-button
+        [label]="'Read more'"
+        [routerLink]="['/news-detail', article.source.id]"
+        [className]="'secondary'"
+      >
+      </app-button>
+    </section>
+      <img
+        *ngIf="article.urlToImage"
+        [src]="article.urlToImage"
+        [alt]="article.title"
+        class="feature-article-image"
+      />
+  </article>
+</ng-container>

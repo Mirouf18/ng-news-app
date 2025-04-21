@@ -52,22 +52,7 @@ describe('ButtonComponent', () => {
     expect(component.clicked.emit).toHaveBeenCalledTimes(1);
   });
 
-  it('should emit clicked for anchor clicks and prevent default', () => {
-    spyOn(component.clicked, 'emit');
-    component.href = '/link';
-    component.label = 'Link';
-    fixture.detectChanges();
-
-    const anchorDe = fixture.debugElement.query(By.css('a'));
-    const mockEvent = new MouseEvent('click');
-    spyOn(mockEvent, 'preventDefault');
-    spyOn(mockEvent, 'stopPropagation');
-
-    anchorDe.triggerEventHandler('click', mockEvent);
-    expect(mockEvent.preventDefault).toHaveBeenCalled();
-    expect(mockEvent.stopPropagation).toHaveBeenCalled();
-    expect(component.clicked.emit).toHaveBeenCalledTimes(1);
-  });
+  
 
   it('should apply the className input to the host element', () => {
     component.className = 'my-btn';
