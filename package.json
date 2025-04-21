@@ -9,7 +9,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test-ci": "ng test --watch=false --browsers=ChromeHeadless",
-    "deploy-ghpages": "ng deploy --base-href=/ng-news-app/"
+    "deploy-ghpages": "ng deploy --base-href=/ng-news-app/",
+    "lint": "ng lint && npx stylelint \"**/*.scss\""
   },
   "private": true,
   "dependencies": {
@@ -37,12 +38,17 @@
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
     "angular-cli-ghpages": "^2.0.3",
+    "angular-eslint": "19.3.0",
+    "eslint": "^9.23.0",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.7.2"
+    "stylelint": "^16.18.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "8.27.0"
   }
 }

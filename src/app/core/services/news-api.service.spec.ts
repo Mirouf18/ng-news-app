@@ -90,7 +90,6 @@ describe('NewsApiService Branch Coverage', () => {
   let service: NewsApiService;
   let httpMock: HttpTestingController;
   const ENDPOINT = 'https://newsapi.org/v2/everything';
-  const API_KEY = environment.newsApiKey;
 
   beforeEach(() => {
     TestBed.configureTestingModule({

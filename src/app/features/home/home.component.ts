@@ -10,6 +10,4 @@ import { NewsListComponent } from '../../shared/components/news-list/news-list.c
   standalone: true
 })
 export class HomeComponent {
-  constructor() { }
-
 }

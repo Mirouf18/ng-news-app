@@ -17,8 +17,6 @@ describe('FeatureArticleComponent', () => {
   let component: FeatureArticleComponent;
   let fixture: ComponentFixture<FeatureArticleComponent>;
   let service: MockSpaceNewsService;
-  let routerLink: RouterLink;
-  let mockRouterLink: RouterLink;
 
   const mockArticles: Article[] = [
     {
@@ -55,7 +53,7 @@ describe('FeatureArticleComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FeatureArticleComponent);
     component = fixture.componentInstance;
-    service = TestBed.inject(SpaceNewsService) as any as MockSpaceNewsService;
+    service = TestBed.inject(SpaceNewsService) as unknown as MockSpaceNewsService;
   });
 
   it('should fetch articles and set the first one on init', () => {
