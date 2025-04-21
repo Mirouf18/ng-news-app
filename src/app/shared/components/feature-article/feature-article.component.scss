@@ -21,7 +21,7 @@
  }
 
  img.feature-article-image {
-  margin: 3rem;
+  margin: 1rem;
   object-fit: cover;
   border-radius: 1.5rem;
 }
@@ -33,12 +33,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .feature-article-category {
   font-size: 1.5rem;
-  color: vars.$color-secondary;
+}
+
+.feature-article-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: vars.$color-primary-text;
 }
 
 .feature-article-category, .feature-article-title, .feature-article-description {
@@ -53,15 +58,14 @@
     background-image: none;
     height: 100%;
     width: 100%;
+    gap:2rem;
+    padding: 1rem;
   }
 
-  .feature-article-image {
-    width: 100%;
-
-  }
 
   img.feature-article-image {
-    width: 80%;
+    width: calc(100% - 2rem);
+    height: 400px;
     object-fit: cover;
     border-radius: 1.5rem;
     align-self: center;

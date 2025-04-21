@@ -14,9 +14,8 @@ import { ButtonComponent } from '../button/button.component';
 export class NewsArticleCardComponent {
   @Input() article!: Article;
   @Input() className = '';
-  @Input() featured = false; // used to determine if the article is featured
+  @Input() featured = false;
 
-  // whenever article.featured is true, <article> will get .featured‑article
   @HostBinding('class.featured-article')
   get isFeatured() {
     return !!this.featured;

@@ -6,7 +6,7 @@
       <p class="feature-article-description">{{ article.description }}</p>
       <app-button
         [label]="'Read more'"
-        [routerLink]="['/news-detail', article.source.id]"
+        [routerLink]="['/news', article.source.id]"
         [className]="'secondary'"
       >
       </app-button>

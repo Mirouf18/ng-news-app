@@ -14,7 +14,7 @@
     grid-template-rows: 100px;
     grid-auto-rows: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
   }
 

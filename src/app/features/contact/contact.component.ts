@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../../shared/components/button/button.component'; // Adjust path if needed
+import { ButtonComponent } from '../../shared/components/button/button.component';
 import { ContactCardComponent } from '../../shared/components/contact-card/contact-card.component';
 
 @Component({

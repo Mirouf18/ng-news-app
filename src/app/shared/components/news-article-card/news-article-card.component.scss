@@ -14,17 +14,16 @@
   }
 
   img.thumbnail {
-    height: 400px; // default height for non-featured article
+    height: 400px;
     object-fit: cover;
     border-radius: 1rem;
   }
 
-  // when the host has .featured-article, plus the img.featured-img class
-  &.featured-article {// change to row for featured article
-    flex-direction: row;  // change to row for featured article
+  &.featured-article {
+    flex-direction: row;
     img.thumbnail.featured-img {
-      width: 50%;   // full width for featured card
-      height: auto;  // auto height for featured card
+      width: 50%;
+      height: 400px;
       object-fit: cover;
     }
 
@@ -69,7 +68,8 @@
 
     img.thumbnail {
       width: 100%;
-      height: auto;
+      height: 400px;
+      object-fit: cover;
     }
 
     &.featured-article {
@@ -77,7 +77,8 @@
 
       img.thumbnail.featured-img {
         width: 100%;
-        height: auto;
+        height: 400px;
+        object-fit: cover;
       }
     }
   }
