@@ -21,19 +21,22 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   .app-header {
     flex-direction: column;
     align-items: center;
+
     .logo h1 {
       font-size: 1.2rem;
     }
   }
+
   .app-footer {
     .newsletter {
       h2 {
         font-size: 1.5rem;
       }
+
       .input-container {
         input[type="email"] {
           width: 80vw;

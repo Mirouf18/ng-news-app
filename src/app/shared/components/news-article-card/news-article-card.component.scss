@@ -15,10 +15,10 @@
 
   img.thumbnail {
     height: 400px; // default height for non-featured article
-
     object-fit: cover;
     border-radius: 1rem;
   }
+
   // when the host has .featured-article, plus the img.featured-img class
   &.featured-article {// change to row for featured article
     flex-direction: row;  // change to row for featured article
@@ -41,14 +41,17 @@
 .title {
   color: vars.$color-primary-text;
 }
+
 .meta {
   color: vars.$color-primary-text;
 }
+
 .description {
   text-overflow: ellipsis;
   color: vars.$color-primary-text;
   margin-bottom: auto;
 }
+
 .read-more {
   margin-top: auto;
   margin-left: auto;
@@ -60,9 +63,10 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   .news-article-card {
     flex-direction: column;
+
     img.thumbnail {
       width: 100%;
       height: auto;
@@ -70,6 +74,7 @@
 
     &.featured-article {
       flex-direction: column;
+
       img.thumbnail.featured-img {
         width: 100%;
         height: auto;

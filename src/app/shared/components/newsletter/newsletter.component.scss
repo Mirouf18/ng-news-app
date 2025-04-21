@@ -34,18 +34,16 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
     input[type="email"] {
       width: 30vw;
       padding: 0.5rem;
       border: 1px solid vars.$color-primary-text;
       border-radius: 0.25rem;
-      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
       font-size: 1rem;
       color: vars.$color-primary-text;
       background-color: vars.$color-secondary;
-    }
-    input {
-      //@include card-shadow;
     }
   }
 
@@ -56,21 +54,23 @@
     justify-content: center;
     gap: 0.5rem;
     font-size: 1rem;
-
     color: vars.$color-tertiary-text;
+
     .error-message {
       color: vars.$color-error;
     }
   }
 }
 
-@media  screen and (max-width: 768px) {
+@media  screen and (width <= 768px) {
   .newsletter {
     background-image: none;
     padding: 2rem 0;
+
     h2 {
       width: 80vw;
     }
+
     .form-container {
       flex-direction: column;
       align-items: center;
@@ -78,8 +78,10 @@
       gap: 1rem;
       padding: 1rem;
     }
+
     .input-container {
       flex-direction: column;
+
       input[type="email"] {
         width: 80vw;
       }

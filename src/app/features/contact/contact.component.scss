@@ -41,7 +41,7 @@
   width: 60vw;
   background-color: vars.$color-secondary;
   border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
   margin: 2rem auto;
 }
 
@@ -88,7 +88,7 @@
   margin: 0 auto;
 }
 
-@media  screen and (max-width: 768px) {
+@media  screen and (width <= 768px) {
   .contact-container {
     padding: 0;
   }
@@ -111,6 +111,7 @@
   .send-button {
     margin: auto;
   }
+
   .contact-info-list {
     flex-direction: column;
     gap: 1rem;
