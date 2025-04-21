@@ -1,3 +1,11 @@
 <section class="home">
   <app-feature-article></app-feature-article>
+  <section class="list-articles">
+    <h2>Featured Articles</h2>
+    <app-news-list [pageSize]="4" [featured]="true"></app-news-list>
+  </section>
+  <section class="list-articles">
+    <h2>Recent Articles</h2>
+    <app-news-list [pageSize]="4" [page]="3" [featured]="false"></app-news-list>
+  </section>
 </section>

@@ -1,10 +1,9 @@
 <ng-container *ngIf="href; else buttonTpl">
   <a
     [href]="href"
-    [attr.target]="target"
+    target="_blank"
     rel="noopener"
     [class]="className"
-    (click)="onClick($event)"
   >
     {{ label }}
   </a>

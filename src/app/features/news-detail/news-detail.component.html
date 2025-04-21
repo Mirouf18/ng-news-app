@@ -13,11 +13,11 @@
       <p class="content">{{ article.content || 'No content available.' }}</p>
     </main>
     <footer class="article-footer">
-      <p>Source: {{ article.source.name }}</p>
-      <p>
-        Read more at
-        <a [href]="article.url" target="_blank" rel="noopener">{{ article.url }}</a>
-      </p>
+      <app-button
+        [label]="'Read Full Article'"
+        [href]="article.url"
+        [className]="'primary'">
+      </app-button>
       <app-button
         [routerLink]="['/news']"
         [label]="'Back to News List'"
