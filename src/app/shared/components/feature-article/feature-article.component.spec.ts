@@ -1,24 +1,76 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { of } from 'rxjs';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { FeatureArticleComponent } from './feature-article.component';
+import { SpaceNewsService } from '../../../core/services/space-news.service';
 import { Article } from '../../../core/models/news-api.model';
+import { RouterLink, ActivatedRoute } from '@angular/router';
+
+// filepath: d:/Angular/ng-news-app/ng-news-app/src/app/shared/components/feature-article/feature-article.component.spec.ts
+
+
+class MockSpaceNewsService {
+  getArticles = jasmine.createSpy('getArticles');
+}
 
 describe('FeatureArticleComponent', () => {
   let component: FeatureArticleComponent;
   let fixture: ComponentFixture<FeatureArticleComponent>;
+  let service: MockSpaceNewsService;
+  let routerLink: RouterLink;
+  let mockRouterLink: RouterLink;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [FeatureArticleComponent]
+  const mockArticles: Article[] = [
+    {
+      title: 'Test 1', url: '', urlToImage: '', description: '', publishedAt: '',
+      source: {
+        id: 1,
+        name: ''
+      },
+      author: null,
+      content: null
+    },
+    {
+      title: 'Test 2', url: '', urlToImage: '', description: '', publishedAt: '',
+      source: {
+        id: 2,
+        name: ''
+      },
+      author: null,
+      content: null
+    }
+  ];
+
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [FeatureArticleComponent, RouterLink],
+      providers: [
+        { provide: SpaceNewsService, useClass: MockSpaceNewsService },
+        { provide: ActivatedRoute, useValue: { snapshot: { paramMap: { get: () => 1 } } } }
+      ],
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
+  }));
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(FeatureArticleComponent);
     component = fixture.componentInstance;
+    service = TestBed.inject(SpaceNewsService) as any as MockSpaceNewsService;
   });
 
-  it('should render when article is provided', () => {
-    component.article = { title: 'Test', source: { id: null, name: 'X' }, publishedAt: new Date().toISOString(), description: 'Desc', urlToImage: '', url: '' } as Article;
+  it('should fetch articles and set the first one on init', () => {
+    service.getArticles.and.returnValue(of(mockArticles));
+    fixture.detectChanges(); // triggers ngOnInit
+    expect(service.getArticles).toHaveBeenCalledWith(1, 0, true);
+    expect(component.article).toBe(mockArticles[0]);
+  });
+
+  it('should log an error if no articles are returned', () => {
+    spyOn(console, 'error');
+    service.getArticles.and.returnValue(of([]));
     fixture.detectChanges();
-    const el = fixture.nativeElement.querySelector('app-news-article-card');
-    expect(el).toBeTruthy();
+    expect(console.error).toHaveBeenCalledWith('No articles found');
+    // article input should remain undefined or as provided
+    expect(component.article).toBeUndefined();
   });
 });

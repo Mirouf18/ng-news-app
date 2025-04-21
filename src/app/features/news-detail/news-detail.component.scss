@@ -12,3 +12,15 @@
 
 
 }
+
+.article-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem;
+  background-color: vars.$color-secondary;
+  border-radius: 0.5rem;
+}

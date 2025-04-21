@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NewsApiService } from '../../core/services/news-api.service';
-import { SpaceNewsService } from '../../core/services/space-news.service';
-import { Article } from '../../core/models/news-api.model';
-import { NewsArticleCardComponent } from '../../shared/components/news-article-card/news-article-card.component';
+import { SpaceNewsService } from '../../../core/services/space-news.service';
+import { Article } from '../../../core/models/news-api.model';
+import { NewsArticleCardComponent } from '../news-article-card/news-article-card.component';
 
 @Component({
   standalone: true,
@@ -16,12 +15,15 @@ export class NewsListComponent implements OnInit {
   articles: Article[] = [];
   loading = true;
   error = '';
+  @Input() pageSize = 10; // Default page size
+  @Input() page = 1; // Default page number
+  @Input() featured?: boolean = false; // Flag to indicate if the component is for featured articles
 
-  constructor(private newsApi: NewsApiService, private spaceNewsService: SpaceNewsService) {}
+  constructor(private spaceNewsService: SpaceNewsService) {}
 
   ngOnInit(): void {
     // Fetch news articles from the Space News API
-    this.spaceNewsService.getArticles().subscribe({
+    this.spaceNewsService.getArticles(this.pageSize, this.page, this.featured).subscribe({
       next: res => {
         console.log('Articles:', res);
         this.articles = res;

@@ -1,8 +1,8 @@
-@use '../../../styles/variables' as vars;
+@use '../../../../styles/variables.scss' as vars;
 
 .news-list {
   padding: 2rem;
-  background: vars.$color-secondary;
+  background: transparent;
 
   .error {
     color: vars.$color-error;
@@ -11,10 +11,8 @@
 
   .articles {
     display: grid;
-    grid-template-columns: repeat(3, 400px);
-    grid-auto-flow: dense;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin: auto;
     justify-content: center;
   }
 

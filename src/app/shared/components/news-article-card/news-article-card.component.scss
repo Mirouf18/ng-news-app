@@ -5,11 +5,12 @@
   flex-direction: column;
   justify-content: space-around;
   gap: 2rem;
+  height: 100%;
   img.thumbnail {
-    width: 400px;
-    height: 400px;
+    width: 100%;  // added missing semicolon
+    height: 100%;
     object-fit: cover;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
   }
   // when the host has .featured-article, plus the img.featured-img class
   &.featured-article {// change to row for featured article
