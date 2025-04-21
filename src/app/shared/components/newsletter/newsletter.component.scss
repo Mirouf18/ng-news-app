@@ -64,3 +64,26 @@
   }
 }
 
+@media  screen and (max-width: 768px) {
+  .newsletter {
+    background-image: none;
+    padding: 2rem 0;
+    h2 {
+      width: 80vw;
+    }
+    .form-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .input-container {
+      flex-direction: column;
+      input[type="email"] {
+        width: 80vw;
+      }
+    }
+  }
+
+}

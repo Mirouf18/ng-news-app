@@ -43,3 +43,32 @@
 .feature-article-category, .feature-article-title, .feature-article-description {
   color: vars.$color-secondary;
 }
+
+@media screen  and (max-width: 768px) {
+  .feature-article-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  .feature-article-image {
+    width: 100%;
+
+  }
+  img.feature-article-image {
+    width: 80%;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    align-self: center;
+  }
+
+  .feature-article-content {
+    padding: 1rem;
+    width: 100%;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

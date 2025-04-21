@@ -87,3 +87,33 @@
   height: auto;
   margin: 0 auto;
 }
+
+@media  screen and (max-width: 768px) {
+  .contact-container {
+    padding: 0;
+  }
+
+  .contact-header {
+    padding: 0 2rem;
+  }
+
+  .contact-form {
+    width: 90vw;
+    padding: 2rem;
+    top: -150px;
+  }
+
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .send-button {
+    margin: auto;
+  }
+  .contact-info-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+}

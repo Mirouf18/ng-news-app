@@ -12,7 +12,6 @@
 
 
 }
-
 .article-footer {
   display: flex;
   flex-direction: row;
@@ -23,4 +22,18 @@
   padding: 2rem;
   background-color: vars.$color-secondary;
   border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .news-detail-container {
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .article-footer {
+    flex-direction: column;
+  }
+
 }

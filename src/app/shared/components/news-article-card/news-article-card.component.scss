@@ -53,3 +53,22 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .news-article-card {
+    flex-direction: column;
+    img.thumbnail {
+      width: 100%;
+      height: auto;
+    }
+
+    &.featured-article {
+      flex-direction: column;
+      img.thumbnail.featured-img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  
+}

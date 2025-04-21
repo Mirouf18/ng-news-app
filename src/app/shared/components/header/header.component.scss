@@ -21,27 +21,25 @@
   }
 }
 
-.app-footer {
-  background-color: vars.$color-background;
-  .newsletter {
-    background-color: vars.$color-primary;
-    color: vars.$color-primary-text;
-    .input-container {
-      input[type="email"] {
-        border: 1px solid vars.$color-primary-text;
-      }
-    }
-    .message {
-      color: vars.$color-tertiary-text;
-      .error-message { color: vars.$color-error; }
+@media screen and (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: center;
+    .logo h1 {
+      font-size: 1.2rem;
     }
   }
-}
+  .app-footer {
+    .newsletter {
+      h2 {
+        font-size: 1.5rem;
+      }
+      .input-container {
+        input[type="email"] {
+          width: 80vw;
+        }
+      }
+    }
+  }
 
-.footer-links a:hover {
-  color: vars.$color-primary;
-}
-
-.social-icon {
-  fill: vars.$color-primary;
 }
