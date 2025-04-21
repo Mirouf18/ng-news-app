@@ -13,13 +13,12 @@
       <time>{{ article.publishedAt | date:'medium' }}</time>
     </p>
     <p class="description">{{ article.description }}</p>
-
-    <app-button
+  </section>
+  <app-button
       [label]="'View'"
       [routerLink]="['/news-detail', article.source.id]"
       class="read-more"
     >
     </app-button>
-  </section>
 
 </article>
