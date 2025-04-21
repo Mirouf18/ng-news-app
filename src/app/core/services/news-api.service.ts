@@ -15,7 +15,7 @@ export class NewsApiService {
 
   getEverything(
     query: string,
-    page: 1,
+    page = 1,
     pageSize = 20,
     sortBy: 'relevancy' | 'popularity' | 'publishedAt' = 'publishedAt'
   ): Observable<NewsApiResponse> {
