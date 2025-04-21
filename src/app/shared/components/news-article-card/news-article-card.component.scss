@@ -35,7 +35,7 @@
   color: vars.$color-primary-text;
 }
 .meta {
-  color: vars.$color-tertiary-text;
+  color: vars.$color-primary-text;
 }
 .description {
   text-overflow: ellipsis;
@@ -70,5 +70,5 @@
     }
   }
 
-  
+
 }

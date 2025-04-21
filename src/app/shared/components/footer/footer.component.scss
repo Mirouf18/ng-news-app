@@ -21,6 +21,10 @@
   margin-bottom: 1rem;
 }
 
+.logo-text {
+  color: vars.$color-primary-text;
+}
+
 .footer-links {
   margin-bottom: 0.5rem;
 
@@ -37,7 +41,7 @@
 
 .footer-copy {
   font-size: 0.875rem;
-  color: vars.$color-tertiary-text;
+  color: vars.$color-primary-text;
 }
 .social-media {
   display: flex;
