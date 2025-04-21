@@ -10,7 +10,7 @@
     "test": "ng test",
     "test-ci": "ng test --watch=false --browsers=ChromeHeadless",
     "deploy-ghpages": "ng deploy --base-href=/ng-news-app/",
-    "lint": "ng lint && npx stylelint \"**/*.{scss}\""
+    "lint": "ng lint && npx stylelint \"**/*.scss\""
   },
   "private": true,
   "dependencies": {
