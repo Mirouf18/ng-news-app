@@ -66,3 +66,7 @@ p {
   line-height: 1.625rem;
   font-weight: vars.$font-weight-regular;
 }
+
+.visually-hidden {
+  display: none;
+}
